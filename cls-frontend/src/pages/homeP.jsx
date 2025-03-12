@@ -1,13 +1,13 @@
 
 
 import React from 'react';
-import Nav from '../components/nav';
+import LandscapeH from '../sections/landscapeH';
 // import homepage sections from sections folder here
 
 const Homep = () => {
     return (
         <div id='homepage'>
-            <Nav></Nav>
+            <LandscapeH />
         </div>
     );
 }

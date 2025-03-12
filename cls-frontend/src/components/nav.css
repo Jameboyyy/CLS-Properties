@@ -1,0 +1,52 @@
+
+.nav__container {
+    position: sticky;
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    background-color: #F4F1EA;
+    align-items: center;
+    align-items: center;
+}
+
+.nav__wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 586px;
+}
+
+.company__logo {
+    height: 39px;
+    width: auto;
+}
+
+.nav__lists {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__list {
+    text-align: center;
+    color: #040316;
+    text-decoration: none;
+}
+
+.messenger-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #0047AB;
+}
+
+.nav__contact {
+    background-color: #0047AB;
+    color: #FAFAFA;
+    padding: 10px;
+    border-radius: 20px;
+}

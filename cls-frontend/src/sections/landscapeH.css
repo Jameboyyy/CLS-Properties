@@ -1,0 +1,70 @@
+#landscapeH__container {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    background-color: #F4F1EA;
+}
+
+.landscapeH__wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.landscapeH__sect {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landscapeH__heading {
+    max-width: 500px;
+    font-size: 36px;
+    text-align: center;
+    font-family: Lora, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.landscapeH__subheading {
+    max-width: 384px;
+    text-align: center;
+    font-size: 16px;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.landscapeH__right {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+}
+
+.landscapeH__right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% darkness */
+}
+
+.landscapeH__img {
+    width: 663px;
+    height: 367px;
+    position: absolute;
+    top: 170px;
+    left: -180px;
+    z-index: 2; 
+}
