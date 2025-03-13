@@ -8,4 +8,53 @@ body {
 
 li {
   list-style: none;
+  text-decoration: none;
+}
+
+
+
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --color-heading: #2b1b12;
+  --color-paragraph: #000000;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-primary);
+  color: var(--color-heading);
+}
+
+p {
+  font-family: var(--font-primary);
+  color: var(--color-paragraph);
+  font-size: 14px;
+  font-weight: 500; /* Medium */
+  font-style: italic;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700; /* Bold */
+  font-style: italic;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 500; /* Medium */
+  font-style: italic;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600; /* Semi-Bold */
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700; /* Bold */
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600; /* Semi-Bold */
 }

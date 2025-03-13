@@ -1,3 +1,4 @@
+/* General Nav Styles */
 
 .nav__container {
     position: sticky;
@@ -5,7 +6,6 @@
     width: 100%;
     height: 8vh;
     background-color: #F4F1EA;
-    align-items: center;
     align-items: center;
 }
 
@@ -31,8 +31,11 @@
 
 .nav__list {
     text-align: center;
-    color: #040316;
+    color: #2B1B12;
     text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .messenger-icon {
@@ -49,4 +52,86 @@
     color: #FAFAFA;
     padding: 10px;
     border-radius: 20px;
+}
+
+/* === HAMBURGER MENU === */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    z-index: 10002;  
+    color: #2B1B12;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #F4F1EA;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    padding-top: 50px;
+    z-index: 9999;
+    overflow-y: visible;
+}
+
+.sidebar--open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    z-index: 10001;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul li a,
+.sidebar ul li Link {
+    text-decoration: none !important;
+    color: #2B1B12 !important;
+    display: block;
+}
+
+.sidebar ul li a:visited,
+.sidebar ul li a:hover,
+.sidebar ul li a:active,
+.sidebar ul li Link:visited,
+.sidebar ul li Link:hover,
+.sidebar ul li Link:active {
+    text-decoration: none !important;
+    color: #2B1B12 !important;
+}
+
+/* === MEDIA QUERY FOR RESPONSIVENESS === */
+@media screen and (max-width: 550px) {
+    .nav__lists, .social__links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 300px;
+        z-index: 9999;
+    }
+
 }
