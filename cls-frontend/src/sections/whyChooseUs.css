@@ -1,15 +1,82 @@
 .whyChooseUs__container {
     position: relative;
     margin: 0;
+    padding: 5% 0;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 50vh;
     background-color: #F4F1EA;
+    overflow: hidden;
 }
 
-.whyChooseUs__heading {
-    margin: 5% auto;
+.whyChooseUs__heading--wrapper {
+    margin: 0 auto;
+}
+
+.whyChooseUs__heading,
+.whyChooseUs__subheading {
     text-align: center;
 }
+
+.whyChooseUs__subheading {
+    max-width: 629px;
+    line-height: 1.5;
+}
+
+.wcu__card--wrapper {
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex;
+    gap: 50px;
+}
+
+.whyChooseUs__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 1% 2%;
+    background-color: #DDC7BB;
+    aspect-ratio: 1 / 1;
+    width: 275px;
+}
+
+.icon__bg {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #FBF5F1;
+    border-radius: 8px;
+    height: 63px;
+    width: 63px;
+    padding: 10px;
+}
+
+.card__icon {
+    width:55%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    color: #2B1B12;
+}
+
+.handshake__icon {
+    width: 75%;
+}
+
+.wcu__text--wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__descr {
+    margin: 0;
+    color: #4F3527;
+}
+
+
 
