@@ -7,7 +7,7 @@ const Homep = () => {
     return (
         <div id='homepage'>
             <LandscapeH />
-            <WhyChooseUs />
+            <WhyChooseUs /> 
         </div>
     );
 }
