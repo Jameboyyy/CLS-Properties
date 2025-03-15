@@ -1,23 +1,23 @@
 import React from 'react';
-import './footer.css'
-import { Link } from 'react-router-dom'
+import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer className="footer--container">
-            {/* Project Footer  */}
+            {/* Project Footer */}
             <div className="footer--section">
                 <h4>Projects</h4>
                 <ul>
-                    <Link to='/projects/Bohol'>
-                        <li className='footer__links'>Bohol</li>
+                    <Link to='/projects/Bohol' className='footer--links'>
+                        <li>Bohol</li>
                     </Link>
                     <li>Cebu</li>
                     <li>Dumaguete</li>
                     <li>Ormoc</li>
                     <li>Palawon</li>
                 </ul>
-            </div> 
+            </div>
 
             {/* About Us Footer */}
             <div className='footer--section'>
@@ -27,6 +27,7 @@ const Footer = () => {
                     <li>Our Leaders</li>
                 </ul>
             </div>
+
             {/* Support */}
             <div className="footer--section">
                 <h4>Support</h4>
@@ -39,7 +40,7 @@ const Footer = () => {
 
             {/* CLS Properties Inc */}
             <div className="footer--section">
-                <h4>CLS Properties Inc</h4>
+                <h4>CLS Properties</h4>
                 <address>
                     7th Floor Unit 702, Apple One Equicom Tower,<br />
                     Mindanao Ave., Cebu Business Park,<br />
@@ -49,12 +50,14 @@ const Footer = () => {
 
             {/* Contact Information */}
             <div className="footer--section">
-                <h4>Contact</h4>
-                <p>Mobile:</p>
-                <li>0917-825-6646</li>
-                <li>0932-868-9629</li>
-                <li>0939-912-7027</li>
-                <p>Fax: (032) 233-3982</p>
+                <h4>Mobile:</h4>
+                <ul>
+                    <li>0917-825-6646</li>
+                    <li>0932-868-9629</li>
+                    <li>0939-912-7027</li>
+                </ul>
+                <h4>Fax:</h4> 
+                <p>(032) 233-3982</p>
             </div>
 
             {/* Copyright Section */}

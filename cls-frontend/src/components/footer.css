@@ -2,60 +2,127 @@
 .footer--container {
     background: linear-gradient(to bottom, #F4F1EA, #DDC7BB 10%);
     font-family: var(--font-primary);
-    font-weight: 400px;
+    font-weight: 400;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-
+    padding: 2% 10%;
     background-color: #DDC7BB;
+}
 
-    padding: 20px;
-    gap: 20px;
+/* For Links */
+.footer--links {
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .footer--section {
-    flex: 1;
-    margin-top: 5%;
+    flex: 1 1 12%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.3%;
 }
 
-
+/* Header Text */
 .footer--section h4 {
     color: #000000;
-    font-size: 22px;
-    font-style: bold;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
     text-shadow: 2px 4px 2px rgba(150, 150, 150, 0.25);
+    margin-bottom: 2%;
+    vertical-align: top;
 }
 
+/* List Styling */
 .footer--section ul {
     padding: 0;
-    font-size: 18px;
+    font-size: 14px;
+    list-style-type: none;
 }
 
 .footer--section ul li {
-    margin-bottom: 15px;
-    line-height: 45px;
+    margin-bottom: 3%;
+    line-height: 30px;
     letter-spacing: 0.2px;
 }
 
-address, p {
-    margin: 10px 0; 
+/* Address Styling */
+address {
+    margin: 6% 0;
+    font-size: 14px;
+    line-height: 30px;
 }
 
+address, p {
+    font-size: 14px;
+    margin: 8% 0;
+    line-height: 30px;
+}
 
 /* Copyright Section */
-.footer--copyright {   
-    /* Text */
+.footer--copyright {
     text-align: center;
-
-    /* Other */
     border-top: 1px solid #7A4C40;
     opacity: 0.8;
     width: 100%;
+    margin-top: 1%;
+    padding-top: 1%;
+    padding-bottom: 0;
 }
 
 .footer--copyright h5 {
-    /* Light Italic */
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 770px) {
+    .footer--container {
+        padding: 5% 5%;
+    }
+
+    .footer--section {
+        flex: 1 1 33%;
+        margin-left: 0;
+        margin-bottom: 2%;
+        min-width: 150px;
+    }
+
+    .footer--section h4 {
+        font-size: 16px;
+    }
+
+    .footer--section ul {
+        gap: 5px;
+    }
+
+    .footer--section ul li {
+        margin-bottom: 2%;
+    }
+
+    .footer--copyright h5 {
+        font-size: 10px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .footer--section {
+        flex: 1 1 100%;
+        padding: 5px;
+    }
+
+    .footer--section h4 {
+        font-size: 14px;
+    }
+
+    .footer--section ul li {
+        font-size: 12px;
+    }
+
+    .footer--copyright h5 {
+        font-size: 10px;
+    }
 }
