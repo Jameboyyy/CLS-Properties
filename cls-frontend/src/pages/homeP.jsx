@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import LandscapeH from '../sections/landscapeH';
 import WhyChooseUs from '../sections/whyChooseUs';
