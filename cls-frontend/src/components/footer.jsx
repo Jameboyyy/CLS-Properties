@@ -5,11 +5,17 @@ const Footer = () => {
     return (
         <footer className="footer__container">
             <div className="footer__sect">
-
-            </div>
+                <h4>Projects</h4>
+                <ul>
+                    <li>Bohol</li>
+                    <li>Cebu</li>
+                    <li>Dumaguete</li>
+                    <li>Ormoc</li>
+                    <li>Palawon</li>
+                </ul>
+            </div> 
             <div className="footer__sect">
-                <h1 className="footer__company">&copy; {new Date().getFullYear()}CLS Properties. All Rights reserved.</h1>
-                <h4 className="footer__subcompany">Where Dreams Come Home</h4>
+                <h5 className="footer__company">&copy; {new Date().getFullYear()} CLS Properties. All Rights reserved.</h5>
             </div>
         </footer>
     );
