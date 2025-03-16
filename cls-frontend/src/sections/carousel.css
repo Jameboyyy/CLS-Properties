@@ -1,0 +1,119 @@
+.carousel--images {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 500px; /* Maintain consistent height for landscape */
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel--image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+    width: 50%;  /* Main image size */
+    height: 90%;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Current Image */
+.current {
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Highest priority */
+    filter: none; 
+}
+
+/* Hover Effect for Main Image (Current) */
+.current:hover {
+    transform: translate(-50%, -50%) scale(1.1);  /* Slight pop effect */
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7); /* Enhance the shadow */
+}
+
+/* Behind Image 1 (Closer to the main image) */
+.behind {
+    left: 30%;
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 1;
+    z-index: 2;
+    filter: blur(1px); /* Light blur on the edges */
+}
+
+/* Previous Image 1 (Furthest back on the left) */
+.previous {
+    left: 10%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 1;
+    z-index: 1;
+    filter: blur(2px); /* Stronger blur for images further away */
+}
+
+/* Next Image 1 (Closer to the main image on the right) */
+.next {
+    left: 70%;
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 1;
+    z-index: 2;
+    filter: blur(1px); /* Light blur on the edges */
+}
+
+/* Next Image 2 (Furthest back on the right) */
+.next--far {
+    left: 90%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 1;
+    z-index: 1;
+    filter: blur(2px); /* Stronger blur for images further away */
+}
+.carousel--dots--container {
+    display: flex;
+    align-items: center; /* Center the dots and arrows vertically */
+    justify-content: center; /* Center everything horizontally */
+    margin-top: 20px;
+  }
+  
+  .carousel--arrow--left,
+  .carousel--arrow--right {
+    font-size: 24px;
+    color: #555; /* Arrow color */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 15px; /* Space between arrows and dots */
+  }
+  
+  .carousel--arrow--left:hover,
+  .carousel--arrow--right:hover {
+    color: #333; /* Darker color on hover */
+    transform: scale(1.2); /* Slight scale effect for hover */
+  }
+  
+  /* Dot Container Styling */
+  .carousel--dots {
+    display: flex;
+    justify-content: center; /* Center dots horizontally */
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb; /* Default dot color */
+    border-radius: 50%;
+    margin: 0 5px; /* Space between dots */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #555; /* Active dot color */
+    transform: scale(1.2); /* Enlarge active dot */
+  }
+  
+  .dot:hover {
+    background-color: #777; /* Hover effect for dots */
+  }
+  
+
+  
