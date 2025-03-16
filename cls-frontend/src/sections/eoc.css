@@ -1,0 +1,15 @@
+#eoc__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #F4F1EA;
+}
+
+.eoc__wrapper {
+    
+}
+
+.eoc__heading {
+
+}
