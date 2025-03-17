@@ -1,5 +1,6 @@
 /* Footer Information Section */
 .footer--container {
+    position: relative;
     background: linear-gradient(to bottom, #F4F1EA, #DDC7BB 10%);
     font-family: var(--font-primary);
     font-weight: 400;

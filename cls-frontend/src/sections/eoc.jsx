@@ -8,6 +8,17 @@ import "slick-carousel/slick/slick-theme.css";
 const Eoc = () => {
     const [cityData, setCityData] = useState([]);
     const [isCarousel, setIsCarousel] = useState(window.innerWidth < 1300);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+            setIsCarousel(window.innerWidth < 1300);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         async function loadCityData() {
@@ -15,25 +26,24 @@ const Eoc = () => {
             setCityData(data);
         }
         loadCityData();
-
-        const handleResize = () => {
-            setIsCarousel(window.innerWidth < 1300);
-        };
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     // Slick Carousel Settings
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     const settings = {
         className: "center",
-        centerMode: true,  // Ensures the center slide is in focus
-        infinite: true,  // Allows smooth looping
-        slidesToShow: window.innerWidth < 600 ? 1 : 3,  // Show 1 slide < 600px, 3 slides < 1300px
-        slidesToScroll: 1,  // Moves one slide at a time
+        centerMode: true,
+        infinite: true,
+        slidesToShow: isCarousel && cityData.length > 0 
+            ? (windowWidth < 900 ? 1 : windowWidth < 1100 ? 2 : 3) // Adjust slides based on width
+            : 5,  
+        slidesToScroll: 1,
         speed: 500,
-        initialSlide: Math.floor(cityData.length / 2),  // Starts at the middle slide
-        dots: true,  // Enables pagination dots
-        arrows: true,  // Enables next/prev buttons
+        initialSlide: 0, 
+        dots: true,
+        arrows: true,
+        beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), 
         responsive: [
             {
                 breakpoint: 1300,
@@ -44,7 +54,15 @@ const Eoc = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 2, // ✅ Show 2 cards here
+                    slidesToScroll: 1,
+                    centerPadding: "30px",
+                }
+            },
+            {
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -53,6 +71,7 @@ const Eoc = () => {
             }
         ]
     };
+    
     
 
     return (    
@@ -67,7 +86,7 @@ const Eoc = () => {
                                 <img src={city.main_img_url} alt={city.city} className="city__img" />
                             </div>
                             <h5 className="property__amount">
-                                {Array.isArray(city.properties.property) ? city.properties.property.length : 0} Properties
+                                {Array.isArray(city.properties?.property) ? city.properties.property.length : 0} Properties
                             </h5>
                             <h4 className="city__name">{city.city}</h4>
                         </div>
@@ -81,7 +100,7 @@ const Eoc = () => {
                                 <img src={city.main_img_url} alt={city.city} className="city__img" />
                             </div>
                             <h5 className="property__amount">
-                                {Array.isArray(city.properties.property) ? city.properties.property.length : 0} Properties
+                                {Array.isArray(city.properties?.property) ? city.properties.property.length : 0} Properties
                             </h5>
                             <h4 className="city__name">{city.city}</h4>
                         </div>

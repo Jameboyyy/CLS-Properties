@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 4% 0;
+    padding: 5% 0;
     background-color: #F4F1EA;
     overflow: hidden;
 }
@@ -31,11 +31,13 @@
 .eoc__carousel {
     width: 100%;
     margin: 0 auto;
-   align-items: center;
+    align-items: center;
+    gap: 5px;
 }
 
 /* 🌟 Individual Cards */
 .eoc__card {
+    margin: 5% auto;
     display: flex !important;
     flex-direction: column;
     align-items: center; /* Centers children horizontally */
@@ -43,7 +45,6 @@
     border-radius: 18px;
     transition: transform 0.3s ease-in-out;
 }
-
 
 /* 🖼 Image Wrapper */
 .eoc__card--imgwrapper {
@@ -53,6 +54,7 @@
 }
 
 .city__img {
+    aspect-ratio: 4/3;
     width: 100%;
     height: 375px;
     object-fit: cover;
@@ -85,6 +87,15 @@
     transform: scale(1.05); /* Slightly enlarge the center slide */
     opacity: 1;
 }
+
+.slick-dots {
+    position: absolute;
+    bottom: 10px; /* Pushes dots up */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure it's above the footer */
+}
+
 
 /* Hide Grid When Using Carousel */
 @media screen and (max-width: 1300px) {
