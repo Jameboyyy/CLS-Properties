@@ -1,18 +1,26 @@
 /* Carousel Container */
+.carousel--heading--wrapper {
+  padding-top: 1px;
+}
+.carousel--heading {
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 .carousel--images {
     display: flex;
     justify-content: center;
-    width: 80%;
-    height: 500px; /* Maintain consistent height for landscape */
+    width: 50%;
     position: relative;
     margin: 0 auto;
+    aspect-ratio: 18/6 auto; 
 }
 
 /* Carousel Image */
 .carousel--image {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   object-fit: cover;
   width: 50%;  
   height: 90%;
@@ -23,15 +31,15 @@
 /* Current Image */
 .current {
   left: 50%;  
-  transform: translate(-50%, -50%);
-  z-index: 3; /* Highest priority */
-  opacity: 1; /* Full opacity for current image (New) */
-  transition: transform 0.5s ease-in-out;
+  transform: translate(-50%, -50%) scale(1.05);
+  z-index: 3; 
+  opacity: 1; 
 }
 
 /* Hover Effect for Main Image (Current) */
 .current:hover {
-  transform: translate(-50%, -50%) scale(1.01);  
+  transform: translate(-50%, -50%) scale(1.10);  
+  transition: transform 0.5s ease-in-out;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7); 
 }
 
@@ -63,14 +71,13 @@
 }
 
 /* Next Image 2 (Furthest back on the right) */
-.next--far {
+.far {
   left: 90%;
   transform: translate(-50%, -50%) scale(0.7);
   opacity: 1;
   z-index: 1;
   filter: blur(2px); 
 }
-
 
 /* Container of the arrow keys + dots */
 .carousel--dots--container {
@@ -96,7 +103,7 @@
 
 .carousel--arrow--left:hover,
 .carousel--arrow--right:hover { 
-  color: #a92f07bd;  
+  color: #000000bd;  
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 

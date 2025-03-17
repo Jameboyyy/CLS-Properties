@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback} from "react";
 import "./carousel.css";
 
 const Carousel = () => {
@@ -7,42 +7,43 @@ const Carousel = () => {
     "/images/image2.jpg",
     "/images/image3.jpg",
     "/images/image4.jpg",
-    "/images/image5.jpg"
+    "/images/image5.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(2); // Start with the third image (index 2)
   const [transitioning, setTransitioning] = useState(false); // To track transition state
 
-  // Function to move to the next image
-  const nextImage = () => {
+  // Memoize nextImage function
+  const nextImage = useCallback(() => {
     if (transitioning) return; // Prevent change during transition
     setTransitioning(true);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [transitioning]);
 
   // Function to move to the previous image
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (transitioning) return; // Prevent change during transition
     setTransitioning(true);
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : (prevIndex - 1) % images.length
     );
-  };
+  }, [transitioning]);
 
   // Handle click on an image
   const handleImageClick = (index) => {
-    setCurrentIndex(index); // Set current image to clicked image
+    if (transitioning) return; // Prevent change during transition
+    setTransitioning(true); // Start transition
+    setCurrentIndex(index); // Set the clicked image as the current image
   };
 
   // Automatically move to the next image at a set interval
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage(); // Trigger next image automatically
-    }, 3000); // Change image every 3 seconds
+    }, 9000); // Change image every 3 seconds
 
-    // Clear interval when the component unmounts
     return () => clearInterval(interval);
-  }, [currentIndex, transitioning]); // Effect will depend on currentIndex
+  }, [nextImage]);
 
   // Reset transitioning state after the animation completes
   useEffect(() => {
@@ -51,13 +52,19 @@ const Carousel = () => {
     return () => clearTimeout(timeout);
   }, [transitioning]);
 
-  // Define the image offsets to maintain the structure
   const imageOffsets = [-2, -1, 0, 1, 2];
 
   return (
     <section id="landscapeH__container">
+      <div className="carousel--heading--wrapper">
+        <div className="carousel--heading">
+          <h2>Explore Our Properties</h2>
+        </div>
+      </div>
       <div className="carousel">
-        <div className="carousel--images">
+        <div
+          className="carousel--images"
+        >
           {imageOffsets.map((offset) => {
             const imageIndex = (currentIndex + offset + images.length) % images.length;
             const imageClasses = [
@@ -66,8 +73,8 @@ const Carousel = () => {
               offset === -1 && "behind",
               offset === 0 && "current",
               offset === 1 && "next",
-              offset === 2 && "next--far",
-              transitioning && "transitioning" // Add transitioning class for smooth effect
+              offset === 2 && "far",
+              transitioning && "transitioning", // Add transitioning class for smooth effect
             ]
               .filter(Boolean)
               .join(" ");
@@ -97,7 +104,7 @@ const Carousel = () => {
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`dot ${index === currentIndex ? 'active' : ''}`}
+                className={`dot ${index === currentIndex ? "active" : ""}`}
                 onClick={() => handleImageClick(index)}
               ></div>
             ))}
