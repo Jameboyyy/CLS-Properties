@@ -1,15 +1,108 @@
+/* 🌟 General Styling */
 #eoc__container {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
+    padding: 4% 0;
     background-color: #F4F1EA;
-}
-
-.eoc__wrapper {
-    
+    overflow: hidden;
 }
 
 .eoc__heading {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 2%;
+    color: #2B1B12;
+}
 
+/* 🏙 Grid Layout for Desktop */
+.eoc__card--wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    gap: 30px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* 🎠 Carousel Styling (for smaller screens) */
+.eoc__carousel {
+    width: 100%;
+    margin: 0 auto;
+   align-items: center;
+}
+
+/* 🌟 Individual Cards */
+.eoc__card {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally */
+    width: 100%;
+    border-radius: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* 🖼 Image Wrapper */
+.eoc__card--imgwrapper {
+    max-width: 325px;
+    width: 100%;
+    align-items: center;
+}
+
+.city__img {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* 🏡 Property Count & City Name */
+.property__amount {
+    font-size: 16px;
+    color: #4F3527;
+    margin-top: 10px;
+}
+
+.city__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B1B12;
+    margin-top: 5px;
+}
+
+/* 🎠 Center Mode Adjustments for Slick Carousel */
+.slick-slide {
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.7; /* Make side slides slightly faded */
+    display: flex;
+    justify-content: center;
+}
+
+.slick-center {
+    transform: scale(1.05); /* Slightly enlarge the center slide */
+    opacity: 1;
+}
+
+/* Hide Grid When Using Carousel */
+@media screen and (max-width: 1300px) {
+    .eoc__card--wrapper {
+        display: none;
+    }
+}
+
+/* 💻 Tablet View (Show 3 Cards in Carousel) */
+@media screen and (max-width: 1300px) {
+    .eoc__carousel {
+        width: 95%;
+    }
+}
+
+/* 📱 Mobile View (Show 1 Card in Carousel) */
+@media screen and (max-width: 600px) {
+    .eoc__carousel {
+        width: 100%;
+    }
 }
