@@ -1,0 +1,47 @@
+#testimony__container {
+    position: relative;
+    margin: 0 auto;
+    background-color: #F4F1EA;
+    overflow: hidden;
+}
+
+.testimony__heading {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+
+.t__wrapper--container {
+    margin: 2%;
+    display: flex;
+    gap: 30px;
+}
+
+.testimony__card {
+    margin: 0;
+}
+
+.t__img__wrapper{
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.t__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.t__name {
+    text-align: center;
+}
+
+.t__descr {
+    text-align: center;
+}
