@@ -1,4 +1,5 @@
 import React from 'react';
+import './homeP.css';
 import LandscapeH from '../sections/landscapeH';
 import WhyChooseUs from '../sections/whyChooseUs';
 import Carousel from '../sections/carousel';

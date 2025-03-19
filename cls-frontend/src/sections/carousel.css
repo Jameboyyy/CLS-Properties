@@ -1,5 +1,7 @@
 /* Carousel Container */
 #carousel--container {
+  position: relative;
+  margin: 0 auto;
   width: 100%;
   min-height: 60vh;
   background-color: #F4F1EA;
@@ -16,7 +18,7 @@
 /* Carousel Images Wrapper */
 .carousel--image--holder {
   width: 90%;
-  height: 45vh; /* Set a fixed height */
+  height: 50vh; /* Set a fixed height */
   overflow: hidden; 
   display: flex;
   justify-content: center; /* Centers the carousel */

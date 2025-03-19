@@ -1,28 +1,39 @@
 #testimony__container {
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     background-color: #F4F1EA;
-    overflow: hidden;
 }
 
 .testimony__heading {
-    margin-bottom: 5%;
     text-align: center;
+}
+
+.testimony__wrapper {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 5% 0;
+    background: linear-gradient(to bottom, rgba(221, 199, 187, 0) 0%, 
+                                           #DDC7BB 10%, 
+                                           #DDC7BB 90%, 
+                                           rgba(221, 199, 187, 0) 100%);
 }
 
 
 .t__wrapper--container {
-    margin: 2%;
     display: flex;
     gap: 30px;
 }
 
 .testimony__card {
-    margin: 0;
+    position: relative;
+    aspect-ratio: 4/3;
+    height: auto;
+    margin: 2%;
+    background-color: #FBF5F1;
 }
 
 .t__img__wrapper{
-    margin: 0 auto;
+    margin: -40px auto 10px auto;
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -43,5 +54,6 @@
 }
 
 .t__descr {
+    margin: 7%;
     text-align: center;
 }
