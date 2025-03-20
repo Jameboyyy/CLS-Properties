@@ -19,18 +19,6 @@ const Carousel = () => {
     "/images/image7.jpg",
   ];
 
-  const goNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.slideNext();
-    }
-  };
-
-  const goPrev = () => {
-    if (swiperRef.current) {
-      swiperRef.current.slidePrev();
-    }
-  };
-
   return (
     <section id="carousel--container">
       <div className="carousel--heading--wrapper">
@@ -74,7 +62,7 @@ const Carousel = () => {
             <SwiperSlide key={index} className="carousel--slide">
               <img
                 src={image}
-                alt={`Image ${index + 1}`}
+                alt={`${index + 1}`}
                 className="carousel--image"
               />
             </SwiperSlide>

@@ -6,6 +6,10 @@ body {
   box-sizing: border-box;
 }
 
+#root {
+  background-color: #F4F1EA;
+}
+
 li {
   list-style: none;
 }
