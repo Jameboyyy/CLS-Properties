@@ -1,0 +1,28 @@
+.ol__container {
+    position: relative;
+    margin-top: 5%;
+}
+
+.ol__heading {
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ol__wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ol__card {
+    display: flex;
+    flex-direction: column;
+    background-color: #DDC7BB;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

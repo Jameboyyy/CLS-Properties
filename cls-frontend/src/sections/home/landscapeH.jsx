@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./landscapeH.css";
-import { fetchLandscapeHome } from "../services/api/landscapeHomeApi";
+import { fetchLandscapeHome } from "../../services/api/landscapeHomeApi";
 
 const LandscapeH = () => {
   const [heroData, setHeroData] = useState(null);

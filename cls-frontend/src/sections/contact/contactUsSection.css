@@ -1,0 +1,118 @@
+#container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Text Section */
+
+#container h1 {
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+#container h2 {
+    width: 200px;
+    font-size: 13px;
+    margin: 0 auto;
+    color: #4F3527;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Page Section */
+.row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+  
+/* Arrange each row as a two-column flex container */
+.form--row {
+    display: flex;
+    gap: 35px;  /* Space between groups */
+    width: 100%;
+}
+  
+/* Each group is a vertical stack for label and input */
+.form--group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form--group label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form--group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #DDC7BB;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+  
+.message--field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+  
+.message--field label {
+    margin-bottom: 10px;
+    text-align: left;
+}
+  
+.message--field textarea {
+    width: 100%; 
+    padding: 8px;
+    background-color: #DDC7BB;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+  
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4F3527;
+}
+
+.submit--button {
+    background-color: #2B1B12;
+    margin-left: auto;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.submit--button:hover {
+    background-color: #a47961;
+}

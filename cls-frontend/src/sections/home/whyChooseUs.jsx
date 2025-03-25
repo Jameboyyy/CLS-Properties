@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import './whyChooseUs.css'
-import { fetchWhyChooseUs } from '../services/api/whyChooseUs';
+import { fetchWhyChooseUs } from '../../services/api/whyChooseUs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faUser, faClipboardList, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons';
-//niggs
+
 const WhyChooseUs = () => {
 
     const [whyChooseUsData, setWhyChooseUsData] = useState(null);   

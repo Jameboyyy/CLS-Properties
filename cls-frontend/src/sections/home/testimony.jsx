@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { fetchTestimonies } from '../services/api/testimonies';
+import { fetchTestimonies } from '../../services/api/testimonies';
 import './testimony.css';
 
 const Testimony = () => {

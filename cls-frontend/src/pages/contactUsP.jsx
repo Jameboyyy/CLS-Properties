@@ -1,6 +1,6 @@
-import React, {useState, useEffect } from 'react';
+import React from 'react';
 import './contactUsP.css';
-import ContactUsSection from '../sections/contactUsSection';
+import ContactUsSection from '../sections/contact/contactUsSection';
 
 const ContactUs = () => {
     return (

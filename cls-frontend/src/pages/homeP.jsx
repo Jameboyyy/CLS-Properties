@@ -1,10 +1,10 @@
 import React from 'react';
 import './homeP.css';
-import LandscapeH from '../sections/landscapeH';
-import WhyChooseUs from '../sections/whyChooseUs';
-import Carousel from '../sections/carousel';
-import Eoc from '../sections/eoc';
-import Testimony from '../sections/testimony';
+import LandscapeH from '../sections/home/landscapeH';
+import WhyChooseUs from '../sections/home/whyChooseUs';
+import Carousel from '../sections/home/carousel';
+import Eoc from '../sections/home/eoc';
+import Testimony from '../sections/home/testimony';
 // import homepage sections from sections folder here
 
 const Homep = () => {
