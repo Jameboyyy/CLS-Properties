@@ -29,8 +29,10 @@ const ContactUsSection = () => {
         <section id="container">
             <div className="row">
                 <div className="column">
-                    <h1>Contact Us</h1>
-                    <h2>Feel free to reach out with any questions, and our team will reach out to you! </h2>
+                    <div className="leftColumnText">
+                        <h1>Contact Us</h1>
+                        <h2>Feel free to reach out with any questions, and our team will reach out to you! </h2>
+                    </div>
                 </div>
 
                 <div className="column">
@@ -39,11 +41,11 @@ const ContactUsSection = () => {
                     <div className="form--row">
                         <div className="form--group">
                             <label htmlFor="first-name">First Name:</label>
-                            <input type="text" id="first-name" name="First Name" />
+                            <input required type="text" id="first-name" name="First Name" placeholder="James" />
                         </div>
                         <div className="form--group">
                             <label htmlFor="last-name">Last Name:</label>
-                            <input type="text" id="last-name" name="Last Name" />
+                            <input required type="text" id="last-name" name="Last Name" placeholder="Tran" />
                         </div>
                     </div>
 
@@ -51,11 +53,11 @@ const ContactUsSection = () => {
                     <div className="form--row">
                         <div className="form--group">
                             <label htmlFor="email">Email:</label>
-                            <input type="email" id="email" name="Email" />
+                            <input required type="email" id="email" name="Email"  placeholder="james@example.com"/>
                         </div>
                         <div className="form--group">
                             <label htmlFor="phone-number">Phone Number:</label>
-                            <input type="tel" id="phone-number" name="Phone Number" />
+                            <input required type="tel" id="phone-number" name="Phone Number"  placeholder="(714)-204-7537"/>
                         </div>
                     </div>
 
@@ -63,18 +65,18 @@ const ContactUsSection = () => {
                     <div className="form--row">
                         <div className="form--group">
                             <label htmlFor="project">Project:</label>
-                            <input type="text" id="project" name="Project" />
+                            <input required type="text" id="project" name="Project"  placeholder="Project Name"/>
                         </div>
                         <div className="form--group">
                             <label htmlFor="subject">Subject:</label>
-                            <input type="text" id="subject" name="Subject" />
+                            <input required type="text" id="subject" name="Subject"  placeholder="Inquiry"/>
                         </div>
                     </div>
 
                     {/* Message Row */}
                     <div className="message--field">
                         <label htmlFor="message">Message:</label>
-                        <textarea id="message" name="message" rows="8" required></textarea>
+                        <textarea required id="message" name="message" rows="8" required></textarea>
                     </div>
 
                     <button className="submit--button" type="submit">Submit</button>
