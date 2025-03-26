@@ -116,7 +116,6 @@ textarea {
     font-family: var(--font-primary);
     font-size: 12px;
     letter-spacing: 0.5px;
-    
 }
 
 .submit--button {
@@ -134,4 +133,36 @@ textarea {
 
 .submit--button:hover {
     background-color: #a47961;
+}
+
+@media (max-width: 1024px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 100px 0px;
+    }
+
+    .leftColumnText{
+        padding: 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    #container {
+        display: flex;
+        padding: 0px;
+        font-family: var(--font-primary);
+    }
+
+    .column {
+        gap: 0px;
+        padding: 0px;
+    }
+
+    .form--row {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
