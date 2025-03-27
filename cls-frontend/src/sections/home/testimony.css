@@ -70,6 +70,7 @@
 }
 
 @media (max-width: 1024px) {
+
     .t__wrapper--container {
         display: none; /* Hide grid on mobile */
     }
@@ -142,12 +143,12 @@
     .swiper-slide {
         transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
         opacity: 0.6;
-        transform: scale(0.9);
     }
     
     .swiper-slide-active {
-        /* transform: scale(1.1); */
         opacity: 1;
+        display: flex;
+        justify-content: center;
     }
 }
 
