@@ -14,7 +14,6 @@
     text-align: center;
     margin-bottom: 2%;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-
 }
 
 /* 🏙 Grid Layout for Desktop */
@@ -40,7 +39,7 @@
     margin: 5% auto;
     display: flex !important;
     flex-direction: column;
-    align-items: center; /* Centers children horizontally */
+    align-items: center;
     width: 100%;
     border-radius: 18px;
     transition: transform 0.3s ease-in-out;
@@ -75,45 +74,23 @@
     margin-top: 5px;
 }
 
-/* 🎠 Center Mode Adjustments for Slick Carousel */
-.slick-slide {
+/* 🎠 Swiper Adjustments */
+.swiper-slide {
     transition: transform 0.3s ease-in-out;
-    opacity: 0.7; /* Make side slides slightly faded */
+    opacity: 0.7;
     display: flex;
     justify-content: center;
 }
 
-.slick-center {
-    transform: scale(1.05); /* Slightly enlarge the center slide */
+.swiper-slide-active {
+    transform: scale(1.05);
     opacity: 1;
 }
 
-.slick-dots {
+/* This is going to be an issue later on but for now fuck it */
+.swiper-pagination {
     position: absolute;
-    bottom: 10px; /* Pushes dots up */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10; /* Ensure it's above the footer */
-}
-
-
-/* Hide Grid When Using Carousel */
-@media screen and (max-width: 1300px) {
-    .eoc__card--wrapper {
-        display: none;
-    }
-}
-
-/* 💻 Tablet View (Show 3 Cards in Carousel) */
-@media screen and (max-width: 1300px) {
-    .eoc__carousel {
-        width: 95%;
-    }
-}
-
-/* 📱 Mobile View (Show 1 Card in Carousel) */
-@media screen and (max-width: 600px) {
-    .eoc__carousel {
-        width: 100%;
-    }
+    transform: translateX(0%);
+    transform: translateY(600%);
+    z-index: 10;
 }
