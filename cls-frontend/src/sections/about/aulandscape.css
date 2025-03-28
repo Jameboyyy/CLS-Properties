@@ -27,12 +27,18 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 30px;
     aspect-ratio: 4 / 3;
+}
+
+.au__info--heading {
+    font-size: calc(2vw + 1vh);
 }
 
 .au__info--desc {
     line-height: 1.4;
     text-align: center;
+    font-size: calc(0.5vw + 1vh);
 }
 
 .au__info--text {
