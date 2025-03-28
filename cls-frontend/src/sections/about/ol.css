@@ -25,4 +25,16 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
+}
+
+.ol__img--wrapper {
+    object-fit: cover;
+    width: 100%;
+}
+
+.ol__card--img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px 50px 0px 0px;
 }
