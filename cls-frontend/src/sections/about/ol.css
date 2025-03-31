@@ -9,24 +9,26 @@
 }
 
 .ol__wrapper {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+.ol__card {
+    flex: 1 1 400px; /* grow: 1, shrink: 1, basis: 400px */
+    max-width: 400px;
+    background-color: #DDC7BB;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.ol__card {
-    display: flex;
-    flex-direction: column;
-    background-color: #DDC7BB;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-}
 
 .ol__img--wrapper {
     object-fit: cover;

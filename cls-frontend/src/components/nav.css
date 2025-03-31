@@ -1,12 +1,14 @@
 /* General Nav Styles */
 
 .nav__container {
+    top: 0;
     position: sticky;
     display: flex;
     width: 100%;
     height: 8vh;
     background-color: #DDC7BB;
     align-items: center;
+    z-index: 9999;
 }
 
 .nav__wrapper {
@@ -120,6 +122,7 @@
 
 /* === MEDIA QUERY FOR RESPONSIVENESS === */
 @media screen and (max-width: 550px) {
+
     .nav__lists, .social__links {
         display: none;
     }
