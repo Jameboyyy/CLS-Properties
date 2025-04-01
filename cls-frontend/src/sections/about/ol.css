@@ -1,6 +1,7 @@
 .ol__container {
     position: relative;
     margin-top: 5%;
+    margin-bottom: 2%;
 }
 
 .ol__heading {
@@ -39,4 +40,19 @@
     width: 100%;
     object-fit: cover;
     border-radius: 50px 50px 0px 0px;
+}
+
+.ol__card--name {
+    font-weight: bold;
+}
+
+.ol--info--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ol--info--wrapper h3,
+.ol--info--wrapper h5 {
+    line-height: 0.5;
 }

@@ -23,11 +23,13 @@ const Ol = () => {
                         <div className="ol__img--wrapper">
                             <img src={leader.leader__img__url} alt="" className="ol__card--img" />
                         </div>
-                        <h3 className="ol__card--name">{leader.name}</h3>
-                        <h5 className="ol__card--position">{leader.position}</h5>
-                        <h5 className="ol__card--dates">
-                            {leader.startofwork}-{leader.endofwork || 'Present'}
-                        </h5>
+                        <div className='ol--info--wrapper'>
+                            <h3 className="ol__card--name">{leader.name}</h3>
+                            <h5 className="ol__card--position">{leader.position}</h5>
+                            <h5 className="ol__card--dates">
+                                {leader.startofwork}-{leader.endofwork || 'Present'}
+                            </h5>
+                        </div>
                     </div>
                 ))}
             </div>
