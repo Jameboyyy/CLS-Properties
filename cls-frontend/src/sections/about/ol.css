@@ -55,4 +55,5 @@
 .ol--info--wrapper h3,
 .ol--info--wrapper h5 {
     line-height: 0.5;
+    padding: 0px;
 }
