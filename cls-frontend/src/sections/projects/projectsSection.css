@@ -66,9 +66,65 @@
   }
 
   /* If you want to keep the button visible */
+
   /* .city--container:hover .city--content h2,
   .city--container:hover .city--content p {
       opacity: 0;
   } */
+
+  /* Tablets (iPads, 768px and up) */
+@media (max-width: 1024px) {
+  .city--container {
+      height: 400px; /* Reduce height */
+  }
+
+  .city--content h2 {
+      font-size: 1.5rem; /* Scale down heading */
+  }
+
+  .city--content p {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+}
+
+/* Mobile Devices (Phones, 767px and below) */
+@media (max-width: 767px) {
+  #projects--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 100px;
+  }
+  .city--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .city--container {
+    width: 95%;
+    height: 300px;
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .city--content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .city--content p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    line-height: 20px;
+  }
+
+  .explore--btn {
+    font-size: 0.9rem;
+  }
+}
   
   

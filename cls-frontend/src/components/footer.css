@@ -1,4 +1,4 @@
-/* Footer Information Section */
+/* Footer Container */
 .footer--container {
     position: relative;
     background: linear-gradient(to bottom, #F4F1EA, #DDC7BB 10%);
@@ -10,12 +10,13 @@
     background-color: #DDC7BB;
 }
 
-/* For Links */
+/* Footer Links */
 .footer--links {
     text-decoration: none; 
     color: inherit; 
 }
 
+/* Footer Sections */
 .footer--section {
     flex: 1 1 12%;
     display: flex;
@@ -79,7 +80,8 @@ address, p {
     margin: 0;
 }
 
-@media (max-width: 1024px) {
+/* Media Query: Accordion Mode for Mobile */
+@media (max-width: 770px) { /* ✅ Fix media query */
     .footer--section {
         flex: 1 1 100%;
         margin-bottom: 1px;
@@ -100,25 +102,28 @@ address, p {
         font-weight: bold;
         transition: transform 0.3s ease-in-out;
     }
+    .footer--copyright {
+        border-top: none;
+    }
+
+    /* Initially hide the content in accordion mode */
+    .footer--content {
+        display: none;
+    }
+
+    /* Show content when section is open */
+    .footer--content.open {
+        display: block;
+    }
+}
+
+/* Ensure sections are always open above 770px */
+@media (min-width: 771px) {
+    .footer--content {
+        display: block !important;
+    }
 
     .footer--copyright {
-        text-align: center;
-        border-top: 1px none #7A4C40;
-        opacity: 0.8;
-        width: 100%;
-        margin-top: 1%;
-        padding-top: 1%;
-        padding-bottom: 0;
-    }
-
-    .footer--content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
-    }
-
-    .footer--content.open {
-        max-height: 300px;
-        padding: 10px 0;
+        border-top: none;
     }
 }

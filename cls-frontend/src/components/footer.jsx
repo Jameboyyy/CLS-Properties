@@ -9,8 +9,16 @@ const Footer = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsAccordion(window.innerWidth <= 770);
+            
+            // Ensure all sections stay open if above 770px
+            if (window.innerWidth > 770) {
+                setOpenSections({});
+            }
         };
+
         window.addEventListener('resize', handleResize);
+        handleResize();
+
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
@@ -24,7 +32,7 @@ const Footer = () => {
     return (
         <footer className="footer--container">
             {[
-                { title: "Projects", items: ["Bohol", "Cebu", "Dumaguete", "Ormoc", "Palawon"], links: true },
+                { title: "Projects", items: ["Bohol", "Cebu", "Dumaguete", "Ormoc", "Palawan"], links: true },
                 { title: "About Us", items: ["Story", "Our Leaders"] },
                 { title: "Support", items: ["FAQ", "Contact Us", "Messenger"] },
                 { title: "CLS Properties", content: (
