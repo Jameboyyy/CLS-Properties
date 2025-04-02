@@ -4,7 +4,7 @@ import ProjectsSection from '../sections/projects/projectsSection';
 
 const cities = [
     {
-      city: "BOHOL",
+      city: "Bohol",
       description: `Experience the perfect mix of serene beaches 
                     and rich culture in Bohol. With its growing 
                     infrastructure and booming tourism, Bohol
