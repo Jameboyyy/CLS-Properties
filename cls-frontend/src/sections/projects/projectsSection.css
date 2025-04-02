@@ -44,6 +44,7 @@
     padding: 10px 20px;
     background-color: #f8a47f;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     color: white;
     font-weight: bold;
@@ -59,15 +60,15 @@
     filter: blur(0);
   }
   
+  /* Hides the button too */
   .city--container:hover .city--content {
     opacity: 0;
   }
 
-  .projects--container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+  /* If you want to keep the button visible */
+  /* .city--container:hover .city--content h2,
+  .city--container:hover .city--content p {
+      opacity: 0;
+  } */
   
   
