@@ -61,16 +61,16 @@
   }
   
   /* Hides the button too */
-  .city--container:hover .city--content {
+  /* .city--container:hover .city--content {
     opacity: 0;
-  }
+  } */
 
   /* If you want to keep the button visible */
 
-  /* .city--container:hover .city--content h2,
+  .city--container:hover .city--content h2,
   .city--container:hover .city--content p {
       opacity: 0;
-  } */
+  }
 
   /* Tablets (iPads, 768px and up) */
 @media (max-width: 1024px) {

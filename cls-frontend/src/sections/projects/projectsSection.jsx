@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 import "./projectsSection.css";
 
 const ProjectsSection = ({ city, description, image, align }) => {
+
+  const navigate = useNavigate();
+
+  const handleExplore = () => {
+    navigate(`/properties/${city.toLowerCase()}`);
+  };
+
   return (
     <section id={`projects--container`}>
       <div className="city--container">
@@ -14,7 +22,9 @@ const ProjectsSection = ({ city, description, image, align }) => {
                 <br />
             </span>
             ))}</p>
-          <button className="explore--btn">Explore our properties</button>
+          <button className="explore--btn" onClick={handleExplore}>
+            Explore our properties
+            </button>
         </div>
       </div>
     </section>

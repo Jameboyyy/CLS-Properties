@@ -25,6 +25,15 @@ const cities = [
       description: `Dumaguete offers a relaxed lifestyle with a thriving expat community. 
                     Known for its affordable living and proximity to universities and natural attractions, Dumaguete is great spot for peaceful living or investment in a growing area.`,
       image: "/images/dumaguete.png",
+    },
+    {
+      city: "Valencia",
+      description: `Jawa Valencia offers a prime opportunity for property investment with its strategic location, 
+                    developing infrastructure, and diverse property options. As the area grows, you stand to benefit 
+                    from rising property values and potential rental income. With easy access to urban amenities, a 
+                    vibrant community, and long-term growth potential, investing in property here is a smart move for 
+                    both homeowners and investors alike. Secure your piece of Jawa Valencia today for a profitable tomorrow!.`,
+      image: "/images/jawa.png",
     }
   ];
 
