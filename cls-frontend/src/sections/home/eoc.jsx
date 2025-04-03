@@ -47,9 +47,6 @@ const Eoc = () => {
                             <div className="eoc__card--imgwrapper">
                                 <img src={city.main_img_url} alt={city.city} className="city__img" />
                             </div>
-                            <h5 className="property__amount">
-                                {Array.isArray(city.properties?.property) ? city.properties.property.length : 0} Properties
-                            </h5>
                             <h4 className="city__name">{city.city}</h4>
                         </SwiperSlide>
                     ))}
@@ -61,9 +58,6 @@ const Eoc = () => {
                             <div className="eoc__card--imgwrapper">
                                 <img src={city.main_img_url} alt={city.city} className="city__img" />
                             </div>
-                            <h5 className="property__amount">
-                                {Array.isArray(city.properties?.property) ? city.properties.property.length : 0} Properties
-                            </h5>
                             <h4 className="city__name">{city.city}</h4>
                         </div>
                     ))}

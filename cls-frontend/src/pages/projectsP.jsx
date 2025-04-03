@@ -25,19 +25,6 @@ const cities = [
       description: `Dumaguete offers a relaxed lifestyle with a thriving expat community. 
                     Known for its affordable living and proximity to universities and natural attractions, Dumaguete is great spot for peaceful living or investment in a growing area.`,
       image: "/images/dumaguete.png",
-    },
-    {
-        city: "Ormoc",
-        description: `Looking for a peaceful, growing community? Known for its affordable living and proximity to universities and natural attractions, 
-                      Dumaguete is a great spot for peaceful living or investment within a growing area.`,
-        image: "/images/ormoc.png",
-    },
-    {
-    city: "Palawan",
-    description: `Discover tropical paradise in Palawan. With its pristine beaches, crystal-clear waters, and thriving eco-tourism, 
-                  Palawan is a top destination for both vacation homes and investment properties. 
-                  Enjoy the beauty of nature and strong long-term potential`,
-    image: "/images/palawan.png",
     }
   ];
 
