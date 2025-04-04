@@ -5,6 +5,7 @@ import WhyChooseUs from '../sections/home/whyChooseUs';
 import Carousel from '../sections/home/carousel';
 import Eoc from '../sections/home/eoc';
 import Testimony from '../sections/home/testimony';
+import UploadTrigger from '../components/uploadTrigger';
 // import homepage sections from sections folder here
 
 const Homep = () => {
@@ -15,6 +16,7 @@ const Homep = () => {
             <Carousel />
             <Testimony />
             <Eoc />
+            {/*<UploadTrigger /> */}
         </div>
     );
 }
