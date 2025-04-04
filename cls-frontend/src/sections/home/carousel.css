@@ -17,7 +17,7 @@
 
 /* Carousel Images Wrapper */
 .carousel--image--holder {
-  width: 90%;
+  width: 100%;
   height: 50vh; /* Set a fixed height */
   overflow: hidden; 
   display: flex;
@@ -94,12 +94,12 @@
 }
 
 .swiper-pagination-bullet  {
-  background-color: #f90000 !important;
+  background-color: #a26161 !important;
   opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #b04c2e !important;
+  background-color: #8f4c37 !important;
   opacity: 1;
 }
 

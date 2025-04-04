@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const Eoc = () => {
     const [cityData, setCityData] = useState([]);
@@ -55,9 +56,11 @@ const Eoc = () => {
                 <div className="eoc__card--wrapper">
                     {cityData.map((city, index) => (
                         <div key={index} className="eoc__card">
-                            <div className="eoc__card--imgwrapper">
-                                <img src={city.main_img_url} alt={city.city} className="city__img" />
-                            </div>
+                            <Link to={`/properties/${city.city}`} className="eoc__card--link">
+                                <div className="eoc__card--imgwrapper">
+                                    <img src={city.main_img_url} alt={city.city} className="city__img" />
+                                </div>
+                            </Link>
                             <h4 className="city__name">{city.city}</h4>
                         </div>
                     ))}
