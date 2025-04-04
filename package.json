@@ -1,0 +1,25 @@
+{
+  "name": "cls-properties",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jameboyyy/CLS-Properties.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jameboyyy/CLS-Properties/issues"
+  },
+  "homepage": "https://github.com/Jameboyyy/CLS-Properties#readme",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.6"
+  }
+}
