@@ -42,36 +42,58 @@ const GalleryP = () => {
     },
   ];
 
-  // Function to get random grid span (ensuring the row always fills)
-  const getRandomGridSpan = () => {
-    return Math.random() > 0.5 ? 1 : 2; // Randomly return 1 or 2 for column span
+  // Predefined row layout patterns
+  const rowLayouts = [
+    [1, 1, 1], // All images take 1 column
+    [2, 1], // One image takes 2 columns, the other 1
+    [1, 2], // One image takes 1 column, the other 2
+  ];
+
+  // Function to get a random layout for a row
+  const getRandomRowLayout = () => {
+    return rowLayouts[Math.floor(Math.random() * rowLayouts.length)];
   };
 
-  // Set random spans for the images only once when the component mounts
-  useEffect(() => {
-    if (!hasInitializedSpans.current) {
-      const spans = [];
-      let currentRowWidth = 0;
-      
-      // Loop through each image and assign a column span
-      cards.forEach(() => {
-        let span;
-        if (currentRowWidth === 3) {
-          span = 1; // If row is already full, the next image must take 1 column
-        } else {
-          span = getRandomGridSpan();
-          if (currentRowWidth + span > 3) {
-            span = 1; // If adding span exceeds 3 columns, reset to 1 column
-          }
-        }
-        spans.push(span);
-        currentRowWidth += span; // Update current row width
-        if (currentRowWidth === 3) {
-          currentRowWidth = 0; // Reset row width if it reaches 3
+  // Function to set spans for each image based on row layout
+  const setGridSpans = () => {
+    const spans = [];
+    let currentRowWidth = 0;
+    let rowIndex = 0;
+    const totalCards = cards.length;
+
+    let previousRowLayout = null; // Variable to track the previous row layout
+
+    // Get layouts for each row
+    while (rowIndex * 3 < totalCards) {
+      let rowLayout = getRandomRowLayout(); // Get random layout for the row
+
+      // Ensure the layout is not the same as the previous row's layout
+      while (rowLayout === previousRowLayout) {
+        rowLayout = getRandomRowLayout();
+      }
+
+      // Set spans for the current row
+      rowLayout.forEach((span) => {
+        if (currentRowWidth + span <= 3) {
+          spans.push(span);
+          currentRowWidth += span;
         }
       });
-      
-      setImageSpans(spans);
+
+      previousRowLayout = rowLayout; // Update the previous row layout
+      rowIndex += 1;
+      if (currentRowWidth === 3) {
+        currentRowWidth = 0; // Reset row width when it reaches 3
+      }
+    }
+
+    setImageSpans(spans);
+  };
+
+  // Set spans once when the component mounts
+  useEffect(() => {
+    if (!hasInitializedSpans.current) {
+      setGridSpans(); // Set the layout spans
       hasInitializedSpans.current = true; // Mark spans as initialized
     }
   }, []); // Empty dependency array to run effect only once on mount
