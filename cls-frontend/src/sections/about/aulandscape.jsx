@@ -39,6 +39,7 @@ const Aulandscape = () => {
                     </div>
                 </div>
             </div>
+            <div id="our-leaders"></div>
         </section>
     );
 }

@@ -32,7 +32,7 @@ const Carousel = () => {
           className="carousel--images"
           modules={[Navigation, Pagination, Scrollbar, Autoplay]}
           autoplay={{
-            delay: 1000,
+            delay: 5000,
             disableOnInteraction: false
           }}
           spaceBetween={0}

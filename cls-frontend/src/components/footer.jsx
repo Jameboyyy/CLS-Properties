@@ -31,10 +31,33 @@ const Footer = () => {
 
     return (
         <footer className="footer--container">
-            {[
-                { title: "Projects", items: ["Bohol", "Cebu", "Dumaguete", "Ormoc", "Palawan"], links: true },
-                { title: "About Us", items: ["Story", "Our Leaders"] },
-                { title: "Support", items: ["FAQ", "Contact Us", "Messenger"] },
+            {[ 
+                {
+                    title: "Projects", 
+                    items: [
+                        { name: "Bohol", link: "/properties/bohol" },
+                        { name: "Cebu", link: "/properties/cebu" },
+                        { name: "Dumaguete", link: "/properties/dumaguete" },
+                        { name: "Valencia", link: "/properties/valencia" }
+                    ], 
+                    links: true 
+                },
+                { 
+                    title: "About Us", 
+                    items: [
+                        {name: "Story", link: "/about-us"},
+                        {name: "Our Leaders", link: "/about-us#our-leaders"}
+                    ],
+                    links: true 
+                },
+                { 
+                    title: "Support", 
+                    items: [
+                        {name: "Contact Us", link: "/contact-us"},
+                        {name: "Messenger", link: "https://www.facebook.com/clspropertiesinc2020"}
+                    ],
+                    links: true
+                },
                 { title: "CLS Properties", content: (
                     <address>
                         7th Floor Unit 702, Apple One Equicom Tower,<br />
@@ -53,7 +76,9 @@ const Footer = () => {
                         {items && (
                             <ul>
                                 {items.map((item, i) => links ? (
-                                    <Link key={i} to={`/projects/${item}`} className='footer--links'><li>{item}</li></Link>
+                                    <Link key={i} to={item.link} className='footer--links'>
+                                        <li>{item.name}</li>
+                                    </Link>
                                 ) : (
                                     <li key={i}>{item}</li>
                                 ))}
