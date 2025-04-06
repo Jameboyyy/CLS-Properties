@@ -71,11 +71,11 @@ const ContactUsSection = () => {
                         <div className="form--row">
                             <div className="form--group">
                                 <label htmlFor="first-name">First Name:</label>
-                                <input required type="text" id="first-name" name="first-name" placeholder="James" />
+                                <input required type="text" id="first-name" name="first-name" placeholder="First Name" />
                             </div>
                             <div className="form--group">
                                 <label htmlFor="last-name">Last Name:</label>
-                                <input required type="text" id="last-name" name="last-name" placeholder="Tran" />
+                                <input required type="text" id="last-name" name="last-name" placeholder="Last Name" />
                             </div>
                         </div>
 
@@ -83,11 +83,11 @@ const ContactUsSection = () => {
                         <div className="form--row">
                             <div className="form--group">
                                 <label htmlFor="email">Email:</label>
-                                <input required type="email" id="email" name="email" placeholder="james@example.com" />
+                                <input required type="email" id="email" name="email" placeholder="email@example.com" />
                             </div>
                             <div className="form--group">
                                 <label htmlFor="phone-number">Phone Number:</label>
-                                <input required type="tel" id="phone-number" name="phone-number" placeholder="(714)-204-7537" />
+                                <input required type="tel" id="phone-number" name="phone-number" placeholder="(xxx) xxx-xxx" />
                             </div>
                         </div>
 
