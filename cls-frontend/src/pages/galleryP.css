@@ -121,4 +121,10 @@
       object-fit: cover;
     }
   }
+
+  @media screen and (max-width: 550px) {
+    .property__heading {
+      padding-top: 8vh;
+    }
+  }
   

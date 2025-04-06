@@ -104,7 +104,7 @@ const GalleryP = () => {
   return (
     <section className="carousel-container">
       <div className="carousel-heading">
-        <h2>{property?.replace(/-/g, " ")}</h2>
+        <h2 className="property__heading">{property?.replace(/-/g, " ")}</h2>
       </div>
 
       <div className="image-grid">

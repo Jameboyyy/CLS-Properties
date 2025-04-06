@@ -48,12 +48,7 @@ const Testimony = () => {
                                         <img src={testimony.testimony__img__url} alt="" className="t__img" />
                                     </div>
                                     <h4 className="t__name">{testimony.name}</h4>
-                                    <p className="t__descr">
-                                        James the Goat is a walking disaster on the Rift—a one-man wrecking ball of confusion. 
-                                        Trying every role, he somehow manages to feed top, get lost in the jungle, miss every bot lane last hit, 
-                                        and spam random pings in mid like it’s a game of Minesweeper. His mechanics are questionable, his macro is a myth, 
-                                        and his ability to turn any game around is more like turning a 1v1 into a 4v5. But hey, at least he tries!
-                                    </p>
+                                    <p className="t__descr">{testimony.testimony}</p>
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -66,12 +61,7 @@ const Testimony = () => {
                                     <img src={testimony.testimony__img__url} alt="" className="t__img" />
                                 </div>
                                 <h4 className="t__name">{testimony.name}</h4>
-                                <p className="t__descr">
-                                    James the Goat is a walking disaster on the Rift—a one-man wrecking ball of confusion. 
-                                    Trying every role, he somehow manages to feed top, get lost in the jungle, miss every bot lane last hit, 
-                                    and spam random pings in mid like it’s a game of Minesweeper. His mechanics are questionable, his macro is a myth, 
-                                    and his ability to turn any game around is more like turning a 1v1 into a 4v5. But hey, at least he tries!
-                                </p>
+                                <p className="t__descr">{testimony.testimony}</p>
                             </div>
                         ))}
                     </div>

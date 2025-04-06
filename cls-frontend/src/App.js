@@ -7,10 +7,12 @@ import ContactUs from "./pages/contactUsP.jsx";
 import Projects from "./pages/projectsP.jsx";
 import ProductP from "./pages/productP.jsx";
 import GalleryP from "./pages/galleryP.jsx";
+import ScrollToTop from "./components/scrollToTop.jsx";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path='/' element={<Homep />} />
