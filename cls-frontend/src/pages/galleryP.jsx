@@ -3,6 +3,9 @@ import "./galleryP.css";
 import { useParams } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { fetchPropertyImages } from "../services/api/propertyImages";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import emailjs from '@emailjs/browser';
 
 
 function fromSlug(slug) {
@@ -23,6 +26,8 @@ const GalleryP = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [imageSpans, setImageSpans] = useState([]);
   const hasInitializedSpans = useRef(false);
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  const formRef = useRef();
 
   const { city, property } = useParams(); // you'll need to extract these from your route
   const [propertyId, setPropertyId] = useState(null); // this will be fetched based on slug
@@ -101,7 +106,37 @@ const GalleryP = () => {
     setActiveIndex(null);
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const honeypot = e.target.honeypot.value;
+    if (honeypot) {
+      return;
+    }
+
+    const button = e.target.querySelector(".inquiry__submitBtn");
+    button.disabled = true;
+
+    setTimeout(() => {
+      button.disabled = false;
+    }, 5000);
+
+    emailjs.sendForm('service_7qzpels', 'template_bsqr1uv', formRef.current, {
+      publicKey: 'Oap0hlrzyVN5GbZdF',
+    })
+    .then(() => {
+      alert("Inquiry sent successfully!");
+      formRef.current.reset();
+      setIsInquiryOpen(false);
+    })
+    .catch((error) => {
+      alert(`Error: ${error.text}`);
+    });
+
+  }
+
   return (
+    <>
     <section className="carousel-container">
       <div className="carousel-heading">
         <h2 className="property__heading">{property?.replace(/-/g, " ")}</h2>
@@ -135,6 +170,49 @@ const GalleryP = () => {
         </div>
       )}
     </section>
+    <button className="inquiryBtn" onClick={() => setIsInquiryOpen(true)}>
+      <FontAwesomeIcon icon={faEnvelope} />
+    </button>
+    {isInquiryOpen && (
+      <div className="inquiry__overlay" onClick={() => setIsInquiryOpen(false)}>
+        <div className="inquiry__modal" onClick={(e) => e.stopPropagation()}>
+          <div className="inquiry__modal--content">
+          <div className="inquiry__text">
+            <h3 className="inquiry__title">Interested in this property?</h3>
+          </div>
+            <form ref={formRef} onSubmit={sendEmail} className="inquiry__form">
+                <input type="text" name="honeypot" className="inquiry__honeypot" tabIndex="-1" autoComplete="off" />
+
+                <div className="inquiry__fields">
+                  <div className="inquiry__group">
+                    <label>Property Name:</label>
+                    <input type="text" name="project" value={fromSlug(property)} readOnly />
+                  </div>
+
+                  <div className="inquiry__group">
+                    <label>Your Name:</label>
+                    <input type="text" name="name" placeholder="Full Name" required />
+                  </div>
+
+                  <div className="inquiry__group">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="email@example.com" required />
+                  </div>
+
+                  <div className="inquiry__group">
+                    <label>Message:</label>
+                    <textarea name="message" rows="5" placeholder="I'm interested in this property..." required />
+                  </div>
+                </div>
+
+                <button type="submit" className="inquiry__submitBtn">Submit</button>
+              </form>
+            </div>
+          </div>
+          
+      </div>
+    )}
+    </>
   );
 };
 
