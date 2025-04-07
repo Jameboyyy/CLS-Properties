@@ -65,7 +65,7 @@ const Footer = () => {
                         Cebu City, Philippines, 6000
                     </address>
                 ) },
-                { title: "Contact", items: ["0917-825-6646", "0932-868-9629", "0939-912-7027"], extra: <p>Fax: (032) 233-3982</p> }
+                { title: "Contact", items: ["0917-825-6646", "0932-868-9629", "0939-912-7027"], extra: <p className='faxN'>Fax: (032) 233-3982</p> }
             ].map(({ title, items, content, links, extra }, index) => (
                 <div className={`footer--section ${isAccordion ? 'accordion' : ''}`} key={index}>
                     <h4 onClick={() => isAccordion && toggleSection(title)} className="footer--title">

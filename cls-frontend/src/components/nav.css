@@ -6,7 +6,7 @@
     display: flex;
     width: 100%;
     height: 8vh;
-    background-color: #DDC7BB;
+    background-color: #080977;
     align-items: center;
     z-index: 9999;
 }
@@ -32,28 +32,60 @@
 }
 
 .nav__list {
+    position: relative;
     text-align: center;
-    color: #2B1B12;
+    color: #FFFFFF;
     text-decoration: none;
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav__list::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background-color: #DDA93B;
+    transition: width 0.3s ease;
+}
+
+.nav__list:hover::after {
+    width: 100%;
 }
 
 .messenger-icon {
     position: absolute;
-    right: 20px;
+    right: 3%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1);
     font-size: 20px;
-    color: #0047AB;
+    color: #FFFFFF;
+    transition: transform 0.3s ease-in-out;
+}
+
+.messenger-icon:hover {
+    transform: translateY(-50%) scale(1.7);
 }
 
 .nav__contact {
-    background-color: #0047AB;
-    color: #FAFAFA;
+    position: relative;
+    background-color: #DDA93B;
+    color: #000000;
     padding: 10px;
     border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav__contact:hover {
+    transform: scale(1.1);
 }
 
 /* === HAMBURGER MENU === */

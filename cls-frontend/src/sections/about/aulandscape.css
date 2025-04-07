@@ -9,6 +9,7 @@
 }
   
 .au__info--container {
+    color: #ffffff;
     margin: 0 auto;
     width: 100%;
     max-width: 1400px;
@@ -21,7 +22,7 @@
 
 /* Changed to 4 so we can style the shadows independently */
 .au__info--card--tl {
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     border-radius: 54px;
     display: flex;
     flex-direction: column;
@@ -33,7 +34,6 @@
 }
 
 .au__info--card--tr {
-    background-color: #DDC7BB;
     border-radius: 54px;
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@
 }
 
 .au__info--card--br {
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     border-radius: 54px;
     display: flex;
     flex-direction: column;

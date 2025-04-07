@@ -1,7 +1,7 @@
 #testimony__container {
     position: relative;
     margin: 0;
-    background-color: #F4F1EA;
+    background-color: #FFFFFF;
 }
 
 .testimony__heading {
@@ -14,8 +14,8 @@
     max-width: 90%;
     padding: 5% 0;
     background: linear-gradient(to bottom, rgba(221, 199, 187, 0) 0%, 
-                                           #DDC7BB 10%, 
-                                           #DDC7BB 90%, 
+                                           #DDA93B 10%, 
+                                           #DDA93B 90%, 
                                            rgba(221, 199, 187, 0) 100%);
 }
 
@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 2%;
-    background-color: #FBF5F1;
+    background-color: #FFFFFF;
 }
 
 .t__img__wrapper{
@@ -88,7 +88,7 @@
         position: relative;
         width: 100%;
         max-width: 300px;
-        background-color: #FBF5F1;
+        background-color: #FFFFFF;
         padding: 15px;
         border-radius: 10px;
         display: flex;

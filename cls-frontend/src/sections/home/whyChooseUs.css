@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #F4F1EA;
+    background-color: #FFFFFF;
     overflow: hidden;
 }
 
@@ -38,7 +38,7 @@
     justify-content: center;
     border-radius: 18px;
     padding: 1% 2%;
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     aspect-ratio: 1 / 1;
     width: 275px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, .15);

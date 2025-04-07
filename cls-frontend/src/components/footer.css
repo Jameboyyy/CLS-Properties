@@ -1,13 +1,12 @@
 /* Footer Container */
 .footer--container {
     position: relative;
-    background: linear-gradient(to bottom, #F4F1EA, #DDC7BB 10%);
+    background-color: #080977;
     font-family: var(--font-primary);
     font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     padding: 2% 10%;
-    background-color: #DDC7BB;
 }
 
 /* Footer Links */
@@ -34,10 +33,12 @@
     text-shadow: 2px 4px 2px rgba(150, 150, 150, 0.25);
     margin-bottom: 2%;
     vertical-align: top;
+    color: #FFFFFF;
 }
 
 /* List Styling */
 .footer--section ul {
+    color: #FFFFFF;
     padding: 0;
     font-size: 14px;
     list-style-type: none;
@@ -54,12 +55,11 @@ address {
     margin: 6% 0;
     font-size: 14px;
     line-height: 30px;
+    color: #FFFFFF;
 }
 
-address, p {
-    font-size: 14px;
-    margin: 8% 0;
-    line-height: 30px;
+.faxN {
+    color: #FFFFFF;
 }
 
 /* Copyright Section */
@@ -74,6 +74,7 @@ address, p {
 }
 
 .footer--copyright h5 {
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: 300;
     font-style: italic;
@@ -85,7 +86,7 @@ address, p {
     .footer--section {
         flex: 1 1 100%;
         margin-bottom: 1px;
-        border-bottom: 1px solid #7A4C40;
+        border-bottom: 1px solid #0F217C;
     }
 
     .footer--title {

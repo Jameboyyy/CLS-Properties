@@ -22,7 +22,7 @@
 .ol__card {
     flex: 1 1 400px; /* grow: 1, shrink: 1, basis: 400px */
     max-width: 400px;
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     border-radius: 50px;
     display: flex;
     flex-direction: column;

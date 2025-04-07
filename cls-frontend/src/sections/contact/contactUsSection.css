@@ -12,7 +12,7 @@
 #container h1 {
     font-size: 36px;
     font-weight: 800;
-    font-style: italic;
+    font-style: italic; 
     text-align: center;
 }
 
@@ -76,14 +76,14 @@ form {
 .form--group input {
     width: 100%;
     padding: 10px;
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s ease;
 }
 
 .form--group input::placeholder {
-    color: #F4F1EA;
+    color: #000000;
 }
   
 .message--field {
@@ -101,7 +101,7 @@ form {
 .message--field textarea {
     width: 100%; 
     padding: 8px;
-    background-color: #DDC7BB;
+    background-color: #DDA93B;
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s ease;
@@ -123,7 +123,7 @@ textarea {
 
 .submit--button {
     font-family: var(--font-primary);
-    background-color: #2B1B12;
+    background-color: #000000;
     margin-left: auto;
     color: #fff;
     padding: 12px 20px;
