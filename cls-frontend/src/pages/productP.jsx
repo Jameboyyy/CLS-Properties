@@ -40,7 +40,7 @@ const ProductP = () => {
               <div className="image-container">
                 <img src={property.cover_img_url} alt={property.property_name} />
               </div>
-              <h3>{property.property_name}</h3>
+              <h3 className='property__name'>{property.property_name}</h3>
               <p className='property--description'>{property.property_desc}</p>
             </div>
           ))

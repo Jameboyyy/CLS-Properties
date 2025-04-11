@@ -1,6 +1,7 @@
-import React, {useRef } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
+import { motion, useInView } from "framer-motion"; 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,24 +20,38 @@ const Carousel = () => {
     "/images/image7.jpg",
   ];
 
+  const carouselRef = useRef(null);
+  const isInView = useInView(carouselRef, { once: true, margin: "-50px" }); 
+
   return (
     <section id="carousel--container">
       <div className="carousel--heading--wrapper">
-        <div className="carousel--heading">
+        <motion.div
+          className="carousel--heading"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+         >
           <h2>Explore Our Properties</h2>
-        </div>
+        </motion.div>
       </div>
-
-    <div className="carousel--image--holder">
-      <Swiper
+      <motion.div
+        className="carousel--image--holder"
+        ref={carouselRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
+        <Swiper
           className="carousel--images"
           modules={[Navigation, Pagination, Scrollbar, Autoplay]}
           autoplay={{
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }}
           spaceBetween={0}
-          slidesPerView={5} // Show 5 images at once
+          slidesPerView={5}
           loopAdditionalSlides={1}
           loop={true}
           centeredSlides={true}
@@ -68,7 +83,7 @@ const Carousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-    </div>
+      </motion.div>
     </section>
   );
 };

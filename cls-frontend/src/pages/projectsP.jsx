@@ -30,9 +30,7 @@ const cities = [
       city: "Valencia",
       description: `Jawa Valencia offers a prime opportunity for property investment with its strategic location, 
                     developing infrastructure, and diverse property options. As the area grows, you stand to benefit 
-                    from rising property values and potential rental income. With easy access to urban amenities, a 
-                    vibrant community, and long-term growth potential, investing in property here is a smart move for 
-                    both homeowners and investors alike. Secure your piece of Jawa Valencia today for a profitable tomorrow!.`,
+                    from rising property values and potential rental income. `,
       image: "/images/jawa.png",
     }
   ];
@@ -41,7 +39,9 @@ const Projects = () => {
     return (
         <div>
             {cities.map((cityData, index) => (
-                <ProjectsSection key={index} {...cityData} />
+                <ProjectsSection 
+                  key={index}
+                  align={index % 2 === 0 ? "left" : "right"} {...cityData} />
             ))}
         </div>
     );

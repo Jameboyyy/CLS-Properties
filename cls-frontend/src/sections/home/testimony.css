@@ -22,7 +22,7 @@
 
 .t__wrapper--container {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .testimony__card {
@@ -33,13 +33,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 2%;
     background-color: #FFFFFF;
 }
 
 .t__img__wrapper{
-    margin: -40px auto 10px auto;
+    margin: -20px auto 10px auto;
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -57,16 +57,42 @@
 
 .t__name {
     text-align: center;
+    margin: 0;
 }
 
 .t__descr {
-    margin: 7%;
     text-align: center;
+    width: 90%;
+    line-height: 1.5;
 }
 
 .testimony__swiper {
     max-width: 90%;
     margin: 0 auto;
+}
+
+.swipe__indicater {
+    text-align: center;
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+.swipe__icon {
+    font-size: 24px;
+    color: #000000;
+    
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -79,8 +105,8 @@
         max-width: 100%;
         padding: 10% 0;
         background: linear-gradient(to bottom, rgba(221, 199, 187, 0) 0%, 
-                                               #DDC7BB 10%, 
-                                               #DDC7BB 90%, 
+                                               #DDA93B 10%, 
+                                               #DDA93B 90%, 
                                                rgba(221, 199, 187, 0) 100%);
     }
 
@@ -142,13 +168,7 @@
 
     .swiper-slide {
         transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-        opacity: 0.6;
-    }
-    
-    .swiper-slide-active {
         opacity: 1;
-        display: flex;
-        justify-content: center;
     }
 }
 

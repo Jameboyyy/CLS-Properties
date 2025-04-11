@@ -149,28 +149,31 @@
     justify-content: center;
     z-index: 3000;
   }
-  
+
   .inquiry__modal {
     background: #ffffff;
     border-radius: 16px;
-    padding: 30px;
-    width: 90%;
-    max-width: 700px;
+    padding: 4px;
+    width: 60%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-primary);
+    padding-bottom: 10px;
+  
+    margin-top: 60px; 
   }
   
   .inquiry__modal--content {
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    padding: 20px;
   }
   
   .inquiry__text {
     height: 100%;
+    padding: 5%;
   }
 
   .inquiry__title {
-    font-size: 22px;
+    font-size: 27px;
     color: #4F3527;
     font-weight: bold;
     text-align: center;
@@ -179,25 +182,42 @@
   }
   
   .inquiry__form {
-    flex: 2;
+    /* flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
     gap: 20px;
-    text-align: left;
+    /* text-align: left; */
     width: 100%;
+    padding: 20px;
   }
   
-  .inquiry__formFields {
+  .inquiry__fields {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 90%;
   }
   
   .inquiry__group {
     display: flex;
     flex-direction: column;
+    padding: 1px;
   }
+
+  .inquiry__imgHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .inquiry__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
   
   .inquiry__group label {
     font-size: 14px;
@@ -227,12 +247,12 @@
     font-family: var(--font-primary);
     background-color: #000000;
     color: #fff;
-    padding: 12px 20px;
+    padding: 12px 62px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    align-self: flex-end;
+    align-self: center;
     transition: background-color 0.3s ease;
   }
   
