@@ -1,0 +1,28 @@
+.messengerBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 1999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .messengerBtn:hover {
+    transform: scale(1.1);
+  }
+  
+  .messengerBtn--stacked {
+    bottom: 95px; /* pushes it above the inquiryBtn (30px + height + spacing) */
+  }
+  

@@ -46,7 +46,7 @@ const GalleryP = () => {
         .single();
 
       if (propError || !propData) {
-        console.error("❌ Property not found:", propError);
+        console.error("Property not found:", propError);
         return;
       }
 

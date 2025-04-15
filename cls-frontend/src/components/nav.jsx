@@ -3,7 +3,7 @@ import './nav.css';
 import data from '../data/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
@@ -26,8 +26,8 @@ const Nav = () => {
                 </ul>
 
                 <div className="social__links">
-                    <a href="https://www.facebook.com/clspropertiesinc2020" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faSquareFacebook} className="messenger-icon" />
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebookMessenger} className="messenger-icon" />
                     </a>
                 </div>
 

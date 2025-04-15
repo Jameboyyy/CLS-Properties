@@ -139,7 +139,7 @@
     }
   
     .nav__container {
-      position: absolute;
+      position: sticky;
     }
   }
   

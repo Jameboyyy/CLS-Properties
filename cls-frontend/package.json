@@ -17,6 +17,7 @@
     "framer-motion": "^12.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^7.3.0",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.30.3",

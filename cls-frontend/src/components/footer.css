@@ -81,6 +81,27 @@ address {
     margin: 0;
 }
 
+.footer--socials {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .footer--socials a {
+    color: #FFFFFF;
+    font-size: 22px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer--socials a:hover {
+    transform: scale(1.2);
+    color: #DDA93B;
+  }
+  
+
 /* Media Query: Accordion Mode for Mobile */
 @media (max-width: 770px) { /* ✅ Fix media query */
     .footer--section {

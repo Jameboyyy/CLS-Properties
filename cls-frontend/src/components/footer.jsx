@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faFacebook,
+    faYoutube,
+    faTiktok,
+    faFacebookMessenger,
+  } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
     const [isAccordion, setIsAccordion] = useState(window.innerWidth <= 770);
@@ -91,6 +98,20 @@ const Footer = () => {
             ))}
 
             <div className="footer--copyright">
+                <div className="footer--socials">
+                    <a href="https://www.facebook.com/clspropertiesinc2020" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faYoutube} />
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faTiktok} />
+                    </a>
+                    <a href="https://m.me/clspropertiesinc2020" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebookMessenger} />
+                    </a>
+                </div>
                 <h5>&copy; {new Date().getFullYear()} CLS Properties. All Rights Reserved.</h5>
             </div>
         </footer>

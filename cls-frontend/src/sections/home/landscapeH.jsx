@@ -14,11 +14,7 @@ const LandscapeH = () => {
     loadHeroData();
   }, []);
 
-  // Skeleton loader if data isn't available yet
-  if (!heroData) {
-    return <div className="skeleton-loader">Loading...</div>;
-  }
-
+  // Skeleton loader if data isn't available ye
   return (
     <section id="landscapeH__container">
       <div className="landscapeH__wrapper">

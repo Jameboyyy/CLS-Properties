@@ -1,4 +1,15 @@
 /* Main container for the carousel */
+.property__heading {
+  text-align: left;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.property__selling__point {
+  text-align: left;
+  font-style: italic;
+}
+
 .carousel-container {
     padding: 20px;
     max-width: 1200px;
@@ -209,6 +220,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
   }
   
@@ -288,21 +300,54 @@
     }
   }
 
-  @media screen and (max-width: 550px) {
-    .property__heading {
-      padding-top: 8vh;
+  @media screen and (max-width: 650px) {
+    .inquiry__modal--content {
+      flex-direction: column;
+      gap: 20px;
+      max-height: 80vh;
+      overflow-y: auto;
+      align-items: center;
     }
 
     .inquiry__form {
-      align-items: stretch;
+      align-items: center;
     }
   
     .inquiry__submitBtn {
-      align-self: flex-end;
+      align-self: center;
+    }
+
+    .inquiry__text,
+    .inquiry__form {
+      width: 100%;
+      padding: 10px;
+      flex-shrink: 0;
+      align-items: center;
+      text-align: center;
     }
   
-    .inquiry__title {
-      text-align: center;
+    .inquiry__modal {
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inquiry__group label {
+      text-align: left;
+
+    }
+
+  }
+  
+  
+
+  @media screen and (max-width: 550px) {
+    .property__heading {
+      padding-top: 8vh;
     }
   }
   
