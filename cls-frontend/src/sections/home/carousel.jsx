@@ -11,13 +11,13 @@ import "./carousel.css";
 const Carousel = () => {
   const swiperRef = useRef(null);
   const images = [
-    "/images/image1.jpg",
-    "/images/image2.jpg",
-    "/images/image3.jpg",
-    "/images/image4.jpg",
-    "/images/image5.jpg",
-    "/images/image6.jpg",
-    "/images/image7.jpg",
+    "/images/Aston.jpg",
+    "/images/24-12.jpg",
+    "/images/Talay.jpg",
+    "/images/Valencia.jpg",
+    "/images/Daan.jpg",
+    "/images/26-3.jpg",
+    "/images/27-19.jpg",
   ];
 
   const carouselRef = useRef(null);
