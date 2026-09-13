@@ -1,0 +1,32 @@
+{
+  "name": "@supabase/cli-darwin-arm64",
+  "version": "2.117.0",
+  "description": "Supabase CLI binary (darwin-arm64)",
+  "homepage": "https://github.com/supabase/cli#readme",
+  "bugs": {
+    "url": "https://github.com/supabase/cli/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supabase/cli.git",
+    "directory": "packages/cli-darwin-arm64"
+  },
+  "files": [
+    "bin/"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "executableFiles": [
+      "bin/supabase",
+      "bin/supabase-go"
+    ]
+  },
+  "preferUnplugged": true
+}
